@@ -1,0 +1,679 @@
+/****** For the Page Animation ******/
+body {
+  width: 99%;
+}
+
+body {
+  font-family: "Gochi Hand";
+}
+
+.maincontent {
+  font-family: 'Raleway';
+  font-weight: bold;
+  text-align: center;
+  font-size: 50px;
+  color: #fff;
+  margin-top: 40px;
+}
+
+/* First page, i.e Page with the Big Logo */
+#main-page {
+  height: 25px;
+  width: 375px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: none;
+}
+
+/* Second page, i.e Page with the Contents */
+#next-page {
+  height: 25px;
+  width: 375px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: #ffc55c;
+  display: none;
+}
+
+.maincontent, .nextcontent {
+  display: none;
+}
+
+/* "Back to the logo page" Button */
+a.back {
+  font-family: 'Lato';
+  font-size: 20px;
+  color: #dfdfdf;
+  text-decoration: none;
+  text-align: center;
+  width: 20%;
+  margin: 25px auto 30px auto;
+  display: block;
+}
+
+/* Logo from the "main page" */
+.logoBig {
+  height: 40%;
+  width: 50%;
+  border-radius: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 8rem;
+  margin-bottom: auto;
+}
+
+a.nextlink {
+  display: block;
+  text-align: center;
+  margin: auto auto auto 0;
+  width: 13%;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+a.mainlink:hover, a.nextlink:hover {
+  background: #fff;
+  color: #575757;
+}
+
+
+/****** Header ******/
+
+.navbar {
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  padding-bottom: 100px;
+}
+
+.navbar-brand {
+  font-family: "Ubuntu";
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.nav-link {
+  font-size: 1.2rem;
+}
+
+.nav-item {
+  padding: 0 18px;
+}
+
+.nav-item:hover {
+  background-color: #ffc55c;
+}
+
+.logoSmall {
+  height: 4rem;
+  width: 6rem;
+}
+
+/****** ******/
+
+
+/****** Content Section ******/
+
+/* Portfolio.html First Section, i.e. Intro Section - With Picture Background */
+.introSection {
+  margin-top: 6rem;
+  font-family: "Ubuntu";
+  height: 35rem;
+  padding: 0.5rem 0 0 0;
+  text-align: center;
+}
+
+.introSectionBgImage {
+  background-image: linear-gradient(rgba(250, 250, 250, 0.5), rgba(250, 250, 250, 0.5)), url("mountains.jpg"), url("kathmandu.jpg");
+  background-size: 100%;
+  background-blend-mode: lighten;
+  height: 35rem;
+  width: 100%;
+  position: relative;
+}
+
+.introSectionIntroName {
+  font-size: 3rem;
+}
+
+
+  /***** Name Animation ******/
+
+  @font-face {
+    font-family: "Gochi Hand";
+  }
+
+  .name {
+    padding-top: 6rem;
+    font-weight: 50;
+    font-size: 6vw;
+    line-height: 6vw;
+  }
+
+  .name .char {
+    --delay: calc((var(--char-index) + 1) * 400ms);
+    animation: breathe 6000ms infinite both;
+    animation-delay: var(--delay);
+  }
+
+  .name:hover span {
+    animation-play-state: paused;
+  }
+
+  @keyframes breathe {
+    /* when the fonts are 0% duing animation */
+    0% {
+      font-size: 6vw;
+    }
+
+    /* when the fonts are 60% duing animation */
+    60% {
+      font-size: 8vw;
+    }
+
+    /* when the fonts are 100% duing animation */
+    100% {
+      font-size: 6vw;
+    }
+  }
+
+
+.introSectionIntro {
+  font-size: 2.5rem;
+  font-family: "Gochi Hand";
+}
+
+hr {
+  border-style: dotted none none;
+  width: 5%;
+  border-width: 10px;
+}
+
+.credits {
+  font-size: 0.5rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 250px;
+  text-align: right;
+}
+
+/****** ******/
+
+
+/* Portfolio.html Second Section, i.e Skills Section */
+#skills {
+  background-color: white;
+  padding: 8% 3% 4%;
+  text-align: center;
+  position: relative;
+}
+
+.skillsSectionTitle {
+  padding-bottom: 2rem;
+  text-shadow: 0 0 10px #9aceff;
+}
+
+.skillsSectionIcons {
+  color: #9aceff;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  padding: 7%;
+}
+
+.skillsSectionIcons:hover {
+  color: #ffc55c;
+}
+
+/****** ******/
+
+
+/* Portfolio.html Third Section, i.e Relevant Courses Section */
+
+#relevantCourses{
+  height: 30rem;
+  background-image: url("background4.jpg"), url("backgroundTop.jpg"), url("backgroundBlue.jpg");
+  background-size: 100%, 100%;
+  background-blend-mode: lighten;
+  text-align: center;
+  padding: 0 0 5% 0;
+}
+
+.relevantCoursesTitle2 {
+  text-shadow: 0 0 10px #9aceff;
+  text-align: center;
+  padding: 3% 3% 0 3%;
+}
+
+.container{
+  padding: 0 5% 5% 5%;
+  margin-top: 0;
+}
+
+.courses{
+  padding: 8% 10%;
+}
+
+.coursesContents{
+  font-size: 1.75rem;
+  padding-top: 2%;
+}
+
+.carousel-item.active,
+.carousel-item-next,
+.carousel-item-prev{
+    display:block;
+}
+
+.prev{
+  width: 40px;
+  height: 40px;
+  background-color: #9aceff;
+  border-radius: 100%;
+  margin-right: 50%;
+}
+
+.next{
+    width: 40px;
+    height: 40px;
+    background-color: #9aceff;
+    border-radius: 100%;
+    margin-left: 50%;
+  }
+
+/****** ******/
+
+
+/* Portfolio.html Forth Section, i.e Leadership and Volunttering Section */
+
+#leadershipAndVolunteering {
+  height: 45rem;
+  padding: 9% 4% 8% 4%;
+  text-align: center;
+}
+
+.leadershipAndVolunteeringTitle {
+  text-shadow: 0 0 10px #9aceff;
+  padding-top: 0;
+}
+
+.leadershipAndVolunteeringTable {
+  text-align: center;
+  padding: 4%;
+  margin: auto;
+}
+
+.leadershipAndVolunteeringCard {
+  box-shadow: 0 4px 8px 0 #F1BAE0, 0 6px 20px 0 #9aceff, 0 6px 20px 0 #9aceff;
+  text-align: center;
+  margin: auto;
+  width: 20rem;
+  height: 20rem;
+}
+
+.leadershipAndVolunteeringCardHeader {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 #F1BAE0;
+  color: black;
+  padding: 10px;
+  font-size: 40px;
+}
+
+.leadershipAndVolunteeringCardHeaderTitle{
+  font-size: 1.25rem;
+}
+
+.leadershipAndVolunteeringCardHeader:hover {
+  background-color: #ffc55c;
+  color: black;
+}
+
+.leadershipAndVolunteeringCardText {
+  padding: 22px 10px 16px;
+  font-size: 1rem;
+}
+
+/****** ******/
+
+
+/* Portfolio.html Fifth Section, i.e Work Experience */
+
+#workExperience {
+  height: 38rem;
+  padding: 3% 0;
+  background-image: url("background4.jpg"), url("backgroundTop.jpg"), url("backgroundBlue.jpg");
+  background-size: 100%, 100%;
+  background-blend-mode: lighten;
+}
+
+.workExperienceTitle{
+  text-shadow: 0 0 10px #9aceff;
+  text-align: center;
+  padding: 2% 3% 1% 3%;
+}
+
+.workExperienceBox {
+  padding: 0 0 5% 3%;
+  width: 90rem;
+  height: 28rem;
+  margin: 0;
+}
+
+#myTabContentMD {
+  width: 95%;
+  height: 70%;
+  padding: 5%;
+  margin: 1rem 2rem;
+  font-size: 1.5rem;
+}
+
+.workExperienceTabTitle {
+  color: #9aceff;
+  style: bold;
+  margin: auto;
+}
+
+/****** ******/
+
+
+/****** Footer ******/
+
+#footer {
+  text-align: center;
+  padding: 4% 2% 2% 2%;
+}
+
+.bottomIcons{
+  color: black;
+}
+
+.bottomIcons:hover{
+  color: #ffc55c;
+}
+
+.goBack{
+  background-color: #F1BAE0;
+  margin: auto auto auto 0;
+}
+
+.goBack:hover{
+  background-color: white;
+}
+
+/****** ******/
+
+
+/***** contactMe.html ******/
+
+.map-container-section {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+
+.map-container-section .mapouter {
+  /* Maprouter buttons are the buttons below the map */
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.form-header {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+  width: 45%;
+  margin: 0 32% 5%;
+}
+
+.formHeaderContent {
+  padding: 5%;
+}
+
+.contactMeForm {
+  margin-top: 14rem;
+  padding-left: 1rem;
+  padding-top: 6rem;
+}
+
+.contactMeMap {
+  padding-top: 2rem;
+}
+
+.contactMeIcons {
+  color: #ffc55c;
+}
+
+.contactMeSubmit {
+  color: black;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+  font-size: 1rem;
+}
+
+.inputContactMeBtn{
+  border: none;
+  background-color: #82B1FF;
+}
+
+.iconsBelowMap {
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+}
+
+.routeHomeBtn {
+  background-color: #9aceff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+  width: 15rem;
+  margin: 0 43% 3%;
+}
+
+.routeHomeArrow {
+  padding-right: 15%;
+}
+
+.logoRouteHome {
+  margin: 0 48%;
+}
+
+/****** ******/
+
+
+/***** projects.html ******/
+
+.projects {
+  margin-top: 6.5rem;
+  padding: 4% 5% 3%;
+  background-image: url('LeisurePursuitBg.png');
+  height: 95rem;
+}
+
+.projectsTitle{
+  text-shadow: 0 0 10px #9aceff;
+  text-align: center;
+}
+
+.projectsTable {
+  text-align: center;
+  padding: 2%, 4%;
+  margin: auto;
+}
+
+.projectsRow{
+  padding: 5% 0;
+}
+
+.projectsCard {
+  text-align: center;
+  margin: auto;
+  box-shadow: 0 4px 8px 0 #ffc55c, 0 6px 20px 0 #ffc55c;
+  background-color: white;
+  width: 25rem;
+  height: 20rem;
+}
+
+.projectsCardHeader {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 #F1BAE0;
+  color: black;
+  padding: 10px;
+  font-size: 40px;
+}
+
+.projectsCardHeader:hover {
+  background-color: #ffc55c;
+  color: black;
+}
+
+.projectsCardText {
+  padding: 16px 10px;
+}
+
+/****** ******/
+
+
+/***** education.html ******/
+
+.educationBg {
+  padding-top: 8rem;
+  background-image: linear-gradient(rgba(300, 300, 300, 0.5), rgba(300, 300, 300, 0.5)), url("AggieRing.jpg");
+  background-size: 100%;
+  background-blend-mode: lighten;
+  position: relative;
+  width: 100%;
+  height: 80rem;
+}
+
+.educationContents{
+  text-align: center;
+}
+
+/****** ******/
+
+
+/***** leisurePursuit.html ******/
+
+.leisurePursuit {
+  background-image: url('LeisurePursuitBg2.png');
+  padding-top: 8rem;
+}
+
+.leisurePursuitSubTitle {
+  padding: 1%;
+  background-color: #F1BAE0;
+  box-shadow: 0 4px 8px 0 white, 0 6px 20px 0 white;
+  height: 6rem;
+  width: 15rem;
+  margin: auto;
+}
+
+.leisurePursuitTable {
+  text-align: center;
+  padding: 2%;
+  margin: auto;
+}
+
+.leisurePursuitRow{
+  padding: 2% 0;
+}
+
+.leisurePursuitCard{
+  text-align: center;
+  margin: auto;
+  box-shadow: 0 4px 8px 0 #ffc55c, 0 6px 20px 0 #ffc55c;
+  background-color: white;
+  width: 25rem;
+  height: 20rem;
+}
+
+.leisurePursuitCardHeader {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 #F1BAE0;
+  color: black;
+  padding: 10px;
+  font-size: 40px;
+}
+
+.leisurePursuitCardHeader:hover {
+  background-color: #ffc55c;
+  color: black;
+}
+
+.leisurePursuitCardText {
+  padding: 16px 10px;
+}
+
+/****** ******/
+
+
+/* IDK section */
+
+/* .projects {
+  z-index: 0;
+} */
+
+/* .col-lg-2 {
+  padding: 0 7rem;
+  text-align: center;
+} */
+
+/* .test {
+  height: 25rem;
+  background-image: url("background4.jpg");
+  background-size: 20%;
+}
+
+.text1 {
+  height: 80%;
+  width: 80%;
+  display: block;
+}
+
+.howdy {
+  box-shadow: 0 4px 8px 0 #ffc55c, 0 6px 20px 0 #ffc55c;
+  background-color: white;
+  width: 25rem;
+  height: 20rem;
+}
+
+.howdy1 {
+  text-align: center;
+  margin: auto;
+} */
+/*
+.SubTitle3 {
+  width: 20rem;
+} */
+
+/* .webDevelopment {
+  height: 8rem;
+  width: 8rem;
+  margin-bottom: 1rem;
+  background-color: #9aceff;
+  text-align: center;
+}
+
+.webDesign {
+  height: 8rem;
+  width: 8rem;
+  margin-bottom: 1rem;
+}
+
+.responsiveDesign {
+  height: 8rem;
+  width: 8rem;
+  margin-bottom: 1rem;
+} */
